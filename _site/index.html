@@ -9,21 +9,27 @@
 	<link rel="stylesheet" href="main.css" />
 </head>
 <body>
-	
+
+<button
+    class="open-button"
+    onclick="openForm()">OPEN FORM</button>
 	<header>
 		<h1>RESTAURANT RECEIPTS</h1>
-        <div class="team-col">
-		<form id="new-receipt">
+    <div class="form-popup" id="myForm">
+		<form id="new-receipt" class="form-container" action="/action_page.php">
+            <label for="new-name">NAME</label>
 			<input 
 				type="text" 
 				name="new-name" 
 				id="new-name" 
 				placeholder="NAME" />
+            <label for="new-diet">DIETARY RESTRICTIONS</label>
             <input 
 				type="text" 
 				name="new-diet" 
 				id="new-diet" 
 				placeholder="DIETARY RESTRICTIONS" />
+            <label for="new-preference">PREFERENCES</label>
             <input 
 				type="text" 
 				name="new-preference" 
@@ -32,9 +38,9 @@
 			<input 
 				type="submit"
 				id="new-receipt-submit" 
-				value="Add task" />
+				value="ADD FRIEND" />
 		</form>
-        </div>
+    </div>
 	</header>
 	<main>
 		<section class="task-list">
