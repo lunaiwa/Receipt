@@ -117,6 +117,7 @@ header h1{
 
 #name::placeholder {
 	color: var(#0000b9);
+    font-family: 'Dongle', sans-serif;
 }
 #diet {
 	flex: 1 1 0%;
@@ -126,10 +127,12 @@ header h1{
 	margin-right: 1rem;
 	color: var(#dde8ff);
 	font-size: 1.25rem;
+    font-family: 'Dongle', sans-serif;
 }
 
 #diet::placeholder {
 	color: var(#0000b9);
+    font-family: 'Dongle', sans-serif;
 }
 
 #preference {
@@ -140,10 +143,12 @@ header h1{
 	margin-right: 1rem;
 	color: var(#dde8ff);
 	font-size: 1.25rem;
+    font-family: 'Dongle', sans-serif;
 }
 
 #preference::placeholder {
 	color: var(#0000b9);
+    font-family: 'Dongle', sans-serif;
 }
 
 #new-task-submit {
@@ -154,6 +159,7 @@ header h1{
 	margin-right: 1rem;
 	color: var(#dde8ff);
 	font-size: 1.25rem;
+    font-family: 'Dongle', sans-serif;
 }
 
 input[type=text], select, textarea{
@@ -163,6 +169,7 @@ input[type=text], select, textarea{
     border-radius: 4px;
     box-sizing: border-box;
     resize: vertical;
+    font-family: 'Dongle', sans-serif;
 }
 div.container {
     border-radius: 5px;
