@@ -1,67 +1,79 @@
-window.addEventListener('load', () => {
-	const form = document.querySelector("#new-receipt");
-	const input = document.querySelector("#new-name");
-    //const input = document.querySelector("#new-diet");
-    //const input = document.querySelector("#new-preference");
-	const list_el = document.querySelector("#tasks");
-    
-	form.addEventListener('submit', (e) => {
-		e.preventDefault();
+let inputArray = [];
 
-		const task = input.value;
+const newReceiptForm = document.querySelector("#new-receipt");
+const nameInput = document.querySelector("#name");
+const dietInput = document.querySelector("#diet");
+const preferenceInput = document.querySelector("#preference");
+const inputBoxes = document.querySelector("#inputBoxes");
+const readBtn = document.querySelector("#readBtn");
+const output = document.querySelector("#output");
 
-		const task_el = document.createElement('div');
-		task_el.classList.add('task');
+newReceiptForm.addEventListener("submit", createInput);
+readBtn.addEventListener("click", displayInputs);
 
-		const task_content_el = document.createElement('div');
-		task_content_el.classList.add('content');
+function createInput(event) {
+  event.preventDefault();
 
-		task_el.appendChild(task_content_el);
+  const name = nameInput.value;
+  const diet = dietInput.value;
+  const preference = preferenceInput.value;
 
-		const task_input_el = document.createElement('input');
-		task_input_el.classList.add('text');
-		task_input_el.type = 'text';
-		task_input_el.value = task;
-		task_input_el.setAttribute('readonly', 'readonly');
+  if (!name || !diet || !preference) {
+    return;
+  }
 
-		task_content_el.appendChild(task_input_el);
+  const input = { name, diet, preference };
 
-		const task_actions_el = document.createElement('div');
-		task_actions_el.classList.add('actions');
-		
-		const task_edit_el = document.createElement('button');
-		task_edit_el.classList.add('edit');
-		task_edit_el.innerText = 'Edit';
+  inputArray.push(input);
 
-		const task_delete_el = document.createElement('button');
-		task_delete_el.classList.add('delete');
-		task_delete_el.innerText = 'Delete';
+  clearInputs();
+  displayInputs();
+}
 
-		task_actions_el.appendChild(task_edit_el);
-		task_actions_el.appendChild(task_delete_el);
+function displayInputs() {
+  output.innerHTML = "";
 
-		task_el.appendChild(task_actions_el);
+  inputArray.forEach((input, index) => {
+    const div = document.createElement("div");
+    div.innerHTML = `
+      <p>Name: <input type="text" value="${input.name}" id="diet${index}"</p>
+      <p>Diet: <input type="text" value="${input.diet}" id="diet${index}" /></p>
+      <p>Preference: <input type="text" value="${input.preference}" id="preference${index}" /></p>
+      <button onclick="editInput(${index})">Edit</button>
+      <button onclick="deleteInput(${index})">Delete</button>
+    `;
+    output.appendChild(div);
+  });
+}
 
-		list_el.appendChild(task_el);
+function editInput(index) {
+  const dietInput = document.querySelector(`#diet${index}`);
+  const preferenceInput = document.querySelector(`#preference${index}`);
 
-		input.value = '';
+  const updatedInput = {
+    name: inputArray[index].name,
+    diet: dietInput.value,
+    preference: preferenceInput.value,
+  };
 
-		task_edit_el.addEventListener('click', (e) => {
-			if (task_edit_el.innerText.toLowerCase() == "edit") {
-				task_edit_el.innerText = "Save";
-				task_input_el.removeAttribute("readonly");
-				task_input_el.focus();
-			} else {
-				task_edit_el.innerText = "Edit";
-				task_input_el.setAttribute("readonly", "readonly");
-			}
-		});
+  inputArray[index] = updatedInput;
 
-		task_delete_el.addEventListener('click', (e) => {
-			list_el.removeChild(task_el);
-		});
-	});
-});
+  displayInputs();
+}
+
+function deleteInput(index) {
+  inputArray.splice(index, 1);
+
+  displayInputs();
+}
+
+function clearInputs() {
+  nameInput.value = "";
+  dietInput.value = "";
+  preferenceInput.value = "";
+}
+
+
 
 
 

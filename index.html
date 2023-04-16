@@ -15,7 +15,7 @@
 <body>
 
 <button class="open-button" onclick="openForm()">
-    <span class="material-symbols-outlined" style="font-size:50px">
+    <span class="material-symbols-outlined" style="font-size:60px">
         add
         </span>
 </button>
@@ -23,29 +23,25 @@
 		<h1>RESTAURANT RECEIPTS</h1>
     <div class="form-popup" id="myForm">
 		<form id="new-receipt" class="form-container" action="/action_page.php">
-            <label for="new-name">NAME</label>
+            <label for="name">space</label>
 			<input 
 				type="text" 
-				id="new-name" 
+				id="name" 
 				placeholder="NAME" />
-            <label for="new-diet">DIETARY RESTRICTIONS</label>
+            <label for="diet">space</label>
             <input 
 				type="text" 
-				id="new-diet" 
+				id="diet" 
 				placeholder="DIETARY RESTRICTIONS" />
-            <label for="new-preference">PREFERENCES</label>
+            <label for="preference">space</label>
             <input 
 				type="text" 
-				id="new-preference" 
+				id="preference" 
 				placeholder="PREFERENCES" />
-			<input 
-				type="submit"
-				id="new-task-submit" 
-				value="ADD FRIEND" />
-            <button 
-                type="button" 
-                class="btn cancel" 
-                onclick="closeForm()">
+            <label for="new-task-submit">space</label>
+			<input type="submit" id="new-task-submit" value="ADD FRIEND" />
+            
+            <button type="submit" class="btn cancel" onclick="closeForm()">
                 <span class="material-symbols-outlined" style="font-size:50px">
                     close
                     </span></button>
@@ -57,7 +53,7 @@
 		<section class="task-list">
 			<h2>Tasks</h2>
 
-			<div id="tasks">
+			<div id="output">
 
             <!--<div class="task">
 					<div class="content">
@@ -68,7 +64,6 @@
 							readonly>
 					</div>
 					<div class="actions">
-						<button class="edit">Edit</button>
 						<button class="delete">Delete</button>
 					</div>
 				</div> -->

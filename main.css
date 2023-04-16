@@ -3,7 +3,7 @@ input[type=text], select {
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
-    border: 1px solid #ccc;
+    border: 1px solid #97ceff;
     border-radius: 4px;
     box-sizing: border-box;
 }
@@ -21,71 +21,52 @@ input[type=submit] {
 }
 
   /* Button used to open the contact form - fixed at the bottom of the page */
-  .open-button {
-    background-color: #fff;
-    color: rgb(12, 11, 11);
+.open-button {
+    background-color: hwb(208 66% 0%);
+    color: rgb(255, 255, 255);
     padding: 16px 20px;
     border: none;
     cursor: pointer;
     position: fixed;
-    bottom: 70px;
-    right: 0px;
+    bottom: 46px;
+    right: 55px;
     width: 280px;
-  }
-  
+}
+
   /* The popup form - hidden by default */
-  .form-popup {
+.form-popup {
     display: none;
     position: fixed;
-    bottom: 0;
+    bottom: 30px;
     right: 15px;
-    border: 3px solid #f1f1f1;
     z-index: 9;
-  }
-  
+}
+
   /* Add styles to the form container */
-  .form-container {
+.form-container {
     max-width: 300px;
     padding: 10px;
     background-color: white;
-  }
-  
-  /* Full-width input fields */
-  .form-container input[type=text], .form-container input[type=password] {
-    width: 100%;
-    padding: 15px;
-    margin: 5px 0 22px 0;
-    border: none;
-    background: #f1f1f1;
-  }
-  
-  /* When the inputs get focus, do something */
-  .form-container input[type=text]:focus, .form-container input[type=password]:focus {
-    background-color: #ddd;
+    flex: 1 1 0%;
+	background-color: var(#0033ff);
+	padding: 1rem;
+	border-radius: 1rem;
+	margin-right: 1rem;
     outline: none;
-  }
-  
-  /* Set a style for the submit/login button */
-  .form-container .btn {
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
     background-color: #ffffff;
     color: rgb(255, 0, 0);
     padding: 16px 20px;
     border: none;
     cursor: pointer;
     width: 100%;
-  }
-  
-  /* Add a red background color to the cancel button */
- /* .form-container .cancel {
-    background-color: red;
-  }*/
-  
-  /* Add some hover effects to buttons */
-  .form-container .btn:hover, .open-button:hover {
-    opacity: 1;
-  }
-/*:root {
-	--dark: #374151;
+}
+
+*:root {
+	--dark: hwb(208 66% 0%);
 	--darker: #1F2937;
 	--darkest: #111827;
 	--grey: #6B7280;
@@ -94,87 +75,88 @@ input[type=submit] {
 	--light: #EEE;
 }
 
-* {
+{
 	margin: 0;
 	box-sizing: border-box;
 	font-family: "Fira sans", sans-serif;
 }
 
-/*body {
+body {
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
 	color: #FFF;
 	background-color: var(--dark);
-}*/
+}
 
-/*header {
+header {
 	padding: 2rem 1rem;
 	max-width: 800px;
 	width: 100%;
 	margin: 0 auto;
+    text-align: center;
+    font-weight: 400;
 }
 
 header h1{ 
 	font-size: 2.5rem;
-	font-weight: 300;
-	color: var(--grey);
+	font-weight: 400;
+	color: var(#0000b9);
 	margin-bottom: 1rem;
 }
 
-#new-receipt {
-	display: flex;;
-}
-
-input, button {
-	appearance: none;
-	border: none;
-	outline: none;
-	background: none;
-}*/
-
-
-/*#new-name {
+#name {
 	flex: 1 1 0%;
-	background-color: var(--darker);
+	background-color: var(#0033ff);
 	padding-left: 1rem;
 	border-radius: 1rem;
 	margin-right: 1rem;
-	color: var(--light);
+	color: var(#dde8ff);
 	font-size: 1.25rem;
 }
 
-#new-name::placeholder {
-	color: var(--grey);
+#name::placeholder {
+	color: var(#0000b9);
 }
-#new-diet {
+#diet {
 	flex: 1 1 0%;
-	background-color: var(--darker);
+	background-color: var(#0033ff);
 	padding: 1rem;
 	border-radius: 1rem;
 	margin-right: 1rem;
-	color: var(--light);
+	color: var(#dde8ff);
 	font-size: 1.25rem;
 }
 
-#new-diet::placeholder {
-	color: var(--grey);
+#diet::placeholder {
+	color: var(#0000b9);
 }
 
-#new-preference {
+#preference {
 	flex: 1 1 0%;
-	background-color: var(--darker);
+	background-color: var(#0033ff);
 	padding: 1rem;
 	border-radius: 1rem;
 	margin-right: 1rem;
-	color: var(--light);
+	color: var(#dde8ff);
 	font-size: 1.25rem;
 }
 
-#new-preference::placeholder {
-	color: var(--grey);
+#preference::placeholder {
+	color: var(#0000b9);
 }
-input[type=text], select, textarea{
+
+#new-task-submit {
+	flex: 1 1 0%;
+	background-color: var(#0033ff);
+	padding: 1rem;
+	border-radius: 1rem;
+	margin-right: 1rem;
+	color: var(#dde8ff);
+	font-size: 1.25rem;
+}
+
+/*input[type=text], select, textarea{
     width: 100%;
     padding: 12px;
     border: 1px solid #ccc;
