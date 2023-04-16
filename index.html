@@ -7,12 +7,18 @@
 	<title>Task List 2021</title>
 
 	<link rel="stylesheet" href="main.css" />
+    <!--Close-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <!--Add-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 </head>
 <body>
 
-<button
-    class="open-button"
-    onclick="openForm()">OPEN FORM</button>
+<button class="open-button" onclick="openForm()">
+    <span class="material-symbols-outlined" style="font-size:50px">
+        add
+        </span>
+</button>
 	<header>
 		<h1>RESTAURANT RECEIPTS</h1>
     <div class="form-popup" id="myForm">
@@ -39,6 +45,14 @@
 				type="submit"
 				id="new-receipt-submit" 
 				value="ADD FRIEND" />
+            <button 
+                type="button" 
+                class="btn cancel" 
+                onclick="closeForm()">
+                <span class="material-symbols-outlined" style="font-size:50px">
+                    close
+                    </span></button>
+
 		</form>
     </div>
 	</header>
@@ -48,7 +62,7 @@
 
 			<div id="tasks">
 
-				<!-- <div class="task">
+            <!--<div class="task">
 					<div class="content">
 						<input 
 							type="text" 
