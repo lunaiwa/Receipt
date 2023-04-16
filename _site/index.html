@@ -23,24 +23,24 @@
 		<h1>RESTAURANT RECEIPTS</h1>
     <div class="form-popup" id="myForm">
 		<form id="new-receipt" class="form-container" action="/action_page.php">
-            <label for="new-name">NAME</label>
+            <label for="name">NAME</label>
 			<input 
 				type="text" 
-				id="new-name" 
+				id="name" 
 				placeholder="NAME" />
-            <label for="new-diet">DIETARY RESTRICTIONS</label>
+            <label for="diet">DIETARY RESTRICTIONS</label>
             <input 
 				type="text" 
-				id="labelInput" 
+				id="diet" 
 				placeholder="DIETARY RESTRICTIONS" />
-            <label for="new-preference">PREFERENCES</label>
+            <label for="preference">PREFERENCES</label>
             <input 
 				type="text" 
-				id="valueInput" 
+				id="preference" 
 				placeholder="PREFERENCES" />
 			<input 
 				type="submit"
-				id="new-receipt-submit" 
+				id="createBtn" 
 				value="ADD FRIEND" />
             <button 
                 type="button" 
@@ -53,6 +53,15 @@
 		</form>
     </div>
 	</header>
+
+    <div id="inputBoxes"></div>
+
+<div>
+  <button id="readBtn">Read</button>
+</div>
+
+<div id="output"></div>
+
 	<main>
 		<section class="task-list">
 			<h2>Tasks</h2>
