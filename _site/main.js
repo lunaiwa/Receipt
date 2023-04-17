@@ -74,10 +74,7 @@ function clearInputs() {
 }
 
 
-
-
-
-
+//opening and closing the submit tabs
 function openForm() {
     document.getElementById("myForm").style.display = "block";
   }

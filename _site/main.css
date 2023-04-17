@@ -105,6 +105,11 @@ header h1{
 	margin-bottom: 1rem;
 }
 
+h2{
+    font-family: 'Dongle', sans-serif;
+    color: #ebedfc
+}
+
 button{
     appearance: none;
     border: none;
