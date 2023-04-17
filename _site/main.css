@@ -3,7 +3,7 @@ input[type=text], select {
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
-    border: 1px solid #97ceff;
+    border: 1px solid #ffffff;
     border-radius: 4px;
     box-sizing: border-box;
 }
@@ -105,6 +105,14 @@ header h1{
 	margin-bottom: 1rem;
 }
 
+button{
+    appearance: none;
+    border: none;
+    outline:none;
+    background:none;
+}
+
+
 #name {
 	flex: 1 1 0%;
 	background-color: var(#0033ff);
@@ -151,7 +159,7 @@ header h1{
     font-family: 'Dongle', sans-serif;
 }
 
-#new-task-submit {
+#submit {
 	flex: 1 1 0%;
 	background-color: var(#0033ff);
 	padding: 1rem;
@@ -177,16 +185,6 @@ div.container {
     padding: 20px;
 }
 
-#new-receipt-submit {
-	color: var(--pink);
-	font-size: 1.25rem;
-	font-weight: 700;
-	background-image: linear-gradient(to right, var(--pink), var(--purple));
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	cursor: pointer;
-	transition: 0.4s;
-}
 
 main {
 	flex: 1 1 0%;
@@ -195,82 +193,6 @@ main {
 	margin: 0 auto;
 }
 
-.task-list {
-	padding: 1rem;
-}
-
-.task-list h2 {
-	font-size: 1.5rem;
-	font-weight: 300;
-	color: var(--grey);
-	margin-bottom: 1rem;
-}
-
-#tasks .task {
-	display: flex;
-	justify-content: space-between;
-	background-color: var(--darkest);
-	padding: 1rem;
-	border-radius: 1rem;
-	margin-bottom: 1rem;
-}
-
-.task .content {
-	flex: 1 1 0%;
-}
-
-.task .content .text {
-	color: var(--light);
-	font-size: 1.125rem;
-	width: 100%;
-	display: block;
-	transition: 0.4s;
-}
-
-.task .content .text:not(:read-only) {
-	color: var(--pink);
-}
-
-.task .actions {
-	display: flex;
-	margin: 0 -0.5rem;
-}
-
-.task .actions button {
-	cursor: pointer;
-	margin: 0 0.5rem;
-	font-size: 1.125rem;
-	font-weight: 700;
-	text-transform: uppercase;
-	transition: 0.4s;
-}
-
-.task .actions button:hover {
-	opacity: 0.8;
-}
-
-.task .actions button:active {
-	opacity: 0.6;
-}
-
-.task .actions .edit {
-	background-image: linear-gradient(to right, var(--pink), var(--purple));
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-}
-
-.task .actions .delete {
-	color: crimson;
-}
-
-.team-col{
-    flex-basis: 23%;
-    background: rgb(255, 255, 255);
-    border-radius: 10px;
-    margin-bottom: 5%;
-    padding: 20px 50px;
-    box-sizing: border-box;
-}
 
 /*hover effect*/
 /*.team-col:hover{
